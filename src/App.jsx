@@ -10,6 +10,7 @@ import Testimonials from "./components/TESTIMONIAL";
 import About from "./components/About"; // Naya component
 import MapSection from "./components/MapSection";
 import Contact from "./components/Contact";
+import PMSuryaGhar from "./components/PMSuryaGhar";
 // Home Page Component (Saare sections yahan aayenge)
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ function App() {
         {/* About Us Route */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/pm-surya-ghar" element={<PMSuryaGhar />} />
       </Routes>
       <Footer />
     </Router>

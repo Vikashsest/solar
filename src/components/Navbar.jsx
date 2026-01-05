@@ -6,7 +6,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "PM Surya Ghar", path: "/yojana" }, // Aapka Yojana wala path
+    { name: "PM Surya Ghar Bijli Yojana ", path: "/pm-surya-ghar" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -34,9 +34,11 @@ export default function Navbar() {
         </nav>
 
         {/* Action Button */}
-        <button className="hidden md:block bg-black text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition-colors uppercase text-sm">
-          Get a Quote
-        </button>
+        <Link to="/contact">
+          <button className="hidden md:block bg-black text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition-colors uppercase text-sm">
+            Get a Quote
+          </button>
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -60,9 +62,11 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <button className="w-full bg-black text-white py-3 rounded-full font-bold">
-            Get a Quote
-          </button>
+          <Link to="/contact">
+            <button className="w-full bg-black text-white py-3 rounded-full font-bold">
+              Get a Quote
+            </button>
+          </Link>
         </div>
       )}
     </header>
