@@ -43,7 +43,7 @@ export default function Subsidy() {
             <table className="w-full bg-white text-base rounded-xl overflow-hidden shadow-xl">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="p-3">kW</th>
+                  <th className="p-3">Kw</th>
                   <th className="p-3">Central</th>
                   <th className="p-3">State</th>
                   <th className="p-3">Total</th>
@@ -51,9 +51,9 @@ export default function Subsidy() {
               </thead>
               <tbody>
                 {[
-                  ["1", "30k", "15k", "45k"],
-                  ["2", "60k", "30k", "90k"],
-                  ["3", "78k", "30k", "1.08L"],
+                  ["1Kw", "30k", "15k", "45k"],
+                  ["2Kw", "60k", "30k", "90k"],
+                  ["3Kw", "78k", "30k", "1.08L"],
                 ].map((r, i) => (
                   <tr
                     key={i}
@@ -61,7 +61,7 @@ export default function Subsidy() {
                   >
                     {r.map((c, j) => (
                       <td key={j} className="p-3 font-semibold">
-                        ₹{c}
+                        {c}
                       </td>
                     ))}
                   </tr>

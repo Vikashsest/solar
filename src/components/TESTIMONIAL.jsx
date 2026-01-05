@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 const data = [
   {
     text: "Excellent service, installation was quick and professional.",
-    name: "Tushar, UP",
+    name: "Tushar , Najibabad",
   },
   {
     text: "My electricity bill is almost zero now. Highly recommended!",
-    name: "Ankit, Dhampur",
+    name: "Ankit, Seohara",
   },
   {
     text: "Full subsidy support and transparent process.",
-    name: "Ravi, Haryana",
+    name: "Ravi, Dhampur",
   },
 ];
 

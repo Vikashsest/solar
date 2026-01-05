@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 export default function HeroSlider() {
   const slides = ["/solar1.jpg", "/solar2.jpg", "/solar3.jpg"];
   const [index, setIndex] = useState(0);
@@ -29,9 +30,11 @@ export default function HeroSlider() {
         {/* <p className="text-white text-lg md:text-xl mb-6">
           Conserve Energy • Save Cash • Go Green
         </p> */}
-        <button className="bg-yellow-400 px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
-          Get Free Consultation
-        </button>
+        <Link to="/contact">
+          <button className="bg-yellow-400 px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
+            Get Free Consultation
+          </button>
+        </Link>
       </div>
     </section>
   );

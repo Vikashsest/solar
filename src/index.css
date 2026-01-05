@@ -9,8 +9,9 @@
 }
 
 .animate-projects-slide-fast {
-  animation: projects-slide-fast 15s linear infinite;
+  animation: projects-slide-fast 10s linear infinite;
 }
+
 /* ===== SCROLL FADE UP ===== */
 @keyframes fadeUp {
   from {
