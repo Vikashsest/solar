@@ -7,7 +7,7 @@ const data = [
   },
   {
     text: "My electricity bill is almost zero now. Highly recommended!",
-    name: "Ankit, Delhi",
+    name: "Ankit, Dhampur",
   },
   {
     text: "Full subsidy support and transparent process.",
@@ -17,31 +17,62 @@ const data = [
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
+  const [pause, setPause] = useState(false);
 
   useEffect(() => {
-    const i = setInterval(
-      () => setIndex((prev) => (prev + 1) % data.length),
-      3000
-    );
-    return () => clearInterval(i);
-  }, []);
+    if (pause) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % data.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [pause]);
 
   return (
-    <section className="bg-yellow-400 py-20">
+    <section className="bg-yellow-400 py-24">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="flex items-center gap-4 mb-10">
+        {/* HEADING */}
+        <div className="flex items-center gap-4 mb-12">
           <div className="h-[2px] flex-1 bg-black/30"></div>
-          <h3 className="text-3xl font-bold text-black">Happy Customers</h3>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-black">
+            Happy Customers
+          </h3>
           <div className="h-[2px] flex-1 bg-black/30"></div>
         </div>
 
-        {/* slider card */}
-        <div className="bg-yellow-100 p-10 rounded-2xl shadow">
-          ⭐⭐⭐⭐⭐
-          <p className="mt-4 italic">
-            "My electricity bill is almost zero now. Highly recommended!"
-          </p>
-          <p className="mt-3 font-semibold">– Ankit, Delhi</p>
+        {/* SLIDER */}
+        <div
+          onMouseEnter={() => setPause(true)}
+          onMouseLeave={() => setPause(false)}
+          className="relative overflow-hidden"
+        >
+          <div className="transition-all duration-700 ease-out" key={index}>
+            <div className="bg-yellow-100 p-12 rounded-3xl shadow-xl animate-fade-in">
+              <div className="text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+
+              <p className="text-xl italic text-gray-800 leading-relaxed">
+                “{data[index].text}”
+              </p>
+
+              <p className="mt-6 font-bold text-lg text-gray-900">
+                – {data[index].name}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* DOTS */}
+        <div className="flex justify-center gap-3 mt-8">
+          {data.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-3 w-3 rounded-full transition
+                ${i === index ? "bg-black scale-125" : "bg-black/40"}
+              `}
+            />
+          ))}
         </div>
       </div>
     </section>

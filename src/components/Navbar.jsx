@@ -12,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-yellow-400 border-b-4 border-blue-600 sticky top-0 z-50">
+    <header className="bg-yellow-400 border-b-2 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="font-bold text-xl flex items-center gap-2">

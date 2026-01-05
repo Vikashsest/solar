@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Testimonials from "./components/TESTIMONIAL";
 import About from "./components/About"; // Naya component
 import MapSection from "./components/MapSection";
-
+import Contact from "./components/Contact";
 // Home Page Component (Saare sections yahan aayenge)
 const Home = () => {
   return (
@@ -35,6 +35,7 @@ function App() {
 
         {/* About Us Route */}
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
