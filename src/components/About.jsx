@@ -33,7 +33,7 @@ const About = () => {
             </span> */}
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
               Leading the Solar Revolution in{" "}
-              <span className="text-blue-600">Dhampur</span>
+              <span className="text-blue-600">Bijnor</span>
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -43,7 +43,7 @@ const About = () => {
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4 italic text-blue-800">
                 Authorized Dealer of <strong></strong>{" "}
-                <strong>Vikas Kumar </strong>.
+                <strong>Vipin Gurd </strong>.
               </div>
             </div>
           </div>
